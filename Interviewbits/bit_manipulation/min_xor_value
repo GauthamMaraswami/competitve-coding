@@ -1,0 +1,15 @@
+
+
+    int Solution::findMinXor(vector<int> &A) {
+        sort(A.begin(),A.end());
+        int minxor=INT_MAX;
+        for(vector<int>::iterator it=A.begin();it!=A.end()-1;++it)
+        {
+            int val=*it^*(it+1);
+            minxor=min(minxor,val);
+            //cout<<*it;
+        }
+        return minxor;
+    }
+
+
